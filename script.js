@@ -48,44 +48,44 @@ let computerSelection = play(choices);                  // Calls on the function
 
 
         if (Player >= 5 || Computer >=5)  {
-          showmessage.textContent = `Game Over!`
+          showmessage.textContent = `The Game is Already Over!`
         } else if (playerSelection == 'rock' && computerSelection == 'Paper') {
             Computer += 1 ;
             // alert (`Uh Oh...Computer picks Paper and wins`);
               showplayerscore.textContent = `Player: ${Player}`;
               showcomputerscore.textContent = `Computer: ${Computer}`;
-              showmessage.textContent = `Uh Oh...Computer picks Paper and wins`
+              showmessage.textContent = `Computer Picks Paper and Wins`
       } else if (playerSelection == "rock" && computerSelection == 'Rock') {
-        alert (`It's a tie!`);
+        showmessage.textContent = `Tie!`
       } else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
         Player += 1;
         showplayerscore.textContent = `Player: ${Player}`;
         showcomputerscore.textContent = `Computer: ${Computer}`;
-        alert (`Computer picked Scissors - you win!`);
+        showmessage.textContent = `Computer Picked Scissors -- You Win!`
       } else if  (playerSelection == 'paper' && computerSelection == 'Scissors') {
         Computer += 1 ;
-        alert (`Uh Oh...Computer picks Scissors and wins`);
+        showmessage.textContent = `Computer Scissors and Wins`
         showplayerscore.textContent = `Player: ${Player}`;
         showcomputerscore.textContent = `Computer: ${Computer}`;
       } else if (playerSelection == "paper" && computerSelection == 'Paper') {
-        alert (`It's a tie!`);
+        showmessage.textContent = `Tie!`
       } else if (playerSelection == 'paper' && computerSelection == 'Rock') {
         Player += 1;
         showplayerscore.textContent = `Player: ${Player}`;
         showcomputerscore.textContent = `Computer: ${Computer}`;
-        alert (`Computer picked Rock - you win!`);
+        showmessage.textContent = `Computer Picked Rock -- You Win!`
       } else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
         Computer += 1 ;
         showplayerscore.textContent = `Player: ${Player}`;
         showcomputerscore.textContent = `Computer: ${Computer}`;
-        alert (`Uh Oh...Computer picks Rock and wins`);    
+        showmessage.textContent = `Computer Picks Rock and Wins`;    
       } else if (playerSelection == 'scissors' && computerSelection == 'Scissors') {
-        alert (`It's a tie!`);
+        showmessage.textContent = `Tie!`
     } else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
       Player += 1;
       showplayerscore.textContent = `Player: ${Player}`;
         showcomputerscore.textContent = `Computer: ${Computer}`;
-      alert (`Computer picked Paper - you win!`);
+        showmessage.textContent = `Computer Picked Paper -- You Win!`
       } else {
           console.log('No valid input');
           game()
