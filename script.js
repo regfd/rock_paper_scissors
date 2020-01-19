@@ -10,6 +10,8 @@ let Player = 0;
 let Computer = 0;
 
 
+
+
 /// FIND BUTTONS
 const btn_Rock = document.querySelector('#Rock');
 btn_Rock.addEventListener('click', () => {
@@ -43,11 +45,16 @@ function game(playa){
 let playerSelection = playa;
 let computerSelection = play(choices);                  // Calls on the function outside
  
-  if (playerSelection == 'rock' && computerSelection == 'Paper') {
+
+
+        if (Player >= 5)  {
+          alert('test')
+        } else if (playerSelection == 'rock' && computerSelection == 'Paper') {
             Computer += 1 ;
-            alert (`Uh Oh...Computer picks Paper and wins`);
-            showplayerscore.textContent = `Player: ${Player}`;
-        showcomputerscore.textContent = `Computer: ${Computer}`;
+            // alert (`Uh Oh...Computer picks Paper and wins`);
+              showplayerscore.textContent = `Player: ${Player}`;
+              showcomputerscore.textContent = `Computer: ${Computer}`;
+              showmessage.textContent = `Uh Oh...Computer picks Paper and wins`
       } else if (playerSelection == "rock" && computerSelection == 'Rock') {
         alert (`It's a tie!`);
       } else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
@@ -101,6 +108,13 @@ showcomputerscore.textContent = `Computer: 0`;
 
 Computerscore.appendChild(showcomputerscore);
 
+
+const message = document.querySelector('#message');
+const showmessage = document.createElement('p');
+showmessage.classList.add('showmessage');
+showmessage.textContent = 'test';
+
+message.appendChild(showmessage);
 
 // HERE ARE THE GAMES
 
