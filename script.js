@@ -47,8 +47,8 @@ let computerSelection = play(choices);                  // Calls on the function
  
 
 
-        if (Player >= 5)  {
-          alert('test')
+        if (Player >= 5 || Computer >=5)  {
+          showmessage.textContent = `Game Over!`
         } else if (playerSelection == 'rock' && computerSelection == 'Paper') {
             Computer += 1 ;
             // alert (`Uh Oh...Computer picks Paper and wins`);
@@ -112,7 +112,7 @@ Computerscore.appendChild(showcomputerscore);
 const message = document.querySelector('#message');
 const showmessage = document.createElement('p');
 showmessage.classList.add('showmessage');
-showmessage.textContent = 'test';
+showmessage.textContent = 'Let the game begin!';
 
 message.appendChild(showmessage);
 
